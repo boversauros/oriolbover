@@ -1,54 +1,61 @@
 .header {
-    background: #fafafa;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 20px;
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+  transition: background 0.2s linear;
 }
-  
+
 .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 760px;
-    max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 760px;
+  max-width: 100%;
 }
-  
+
 .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .mark {
-    margin-right: 5px;
+  margin-right: 5px;
 }
-  
+
 .cursor {
-    display: inline-block;
-    width: 7px;
-    height: 1rem;
-    background: var(--primary);
-    margin-left: 5px;
-    border-radius: 1px;
-    animation: cursor 1s infinite;
+  display: inline-block;
+  width: 7px;
+  height: 1rem;
+  background: var(--primary);
+  margin-left: 5px;
+  border-radius: 1px;
+  animation: cursor 1s infinite;
 }
-  
-  .text,
-  .mark {
-    font-size: 18px;
+
+.text,
+.mark {
+  font-size: 18px;
+}
+
+.right {
+  display: flex;
+  position: relative;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
   }
-  
-  .right {
-    display: flex;
-    position: relative;
+  50% {
+    opacity: 1;
   }
-  
-  @keyframes cursor {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  100% {
+    opacity: 0;
   }
+}
