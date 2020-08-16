@@ -20,7 +20,7 @@
   --border-color: #dcdcdc;
 }
 
-@custom-media --phone (min-width: 576px);
-@custom-media --tablet (min-width: 768px);
-@custom-media --desktop (min-width: 992px);
-@custom-media --xldesktop (min-width: 1200px);
+@custom-media --sm (min-width: 576px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 992px);
+@custom-media --xl (min-width: 1200px);

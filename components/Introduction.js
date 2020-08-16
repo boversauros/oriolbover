@@ -1,0 +1,35 @@
+import React from 'react'
+import useSalute from 'lib/useSalute'
+import style from 'styles/components/introduction.module.css'
+
+export default function Introduction() {
+  const salute = useSalute()
+
+  return (
+    <section className="container">
+      <h1>{salute}</h1>
+      <p className={style.iParagraph}>
+        My name is <strong>Oriol Bover</strong>. I am a full stack developer
+        living in Barcelona, Spain. I am currently working at{' '}
+        <a
+          href="https://www.xxxl.digital"
+          target="_blank"
+          rel="noreferrer"
+          className={style.iLink}
+        >
+          XXXLdigital
+        </a>
+        . I used to develop in my free time. You can find my work on my personal{' '}
+        <a
+          href="https://www.github.com/boversauros"
+          target="_blank"
+          rel="noreferrer"
+          className={style.iLink}
+        >
+          Github
+        </a>{' '}
+        page.
+      </p>
+    </section>
+  )
+}

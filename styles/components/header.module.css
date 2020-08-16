@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 20px;
+  padding: 1.25rem;
   transition: background 0.2s linear;
 }
 
@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 760px;
   max-width: 100%;
 }
 
