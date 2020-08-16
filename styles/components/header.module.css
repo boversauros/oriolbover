@@ -30,7 +30,7 @@
 
 .cursor {
   display: inline-block;
-  width: 7px;
+  width: 8px;
   height: 1rem;
   background: var(--primary);
   margin-left: 5px;

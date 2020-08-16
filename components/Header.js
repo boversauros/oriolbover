@@ -1,5 +1,5 @@
 import style from 'styles/components/header.module.css'
-import useTheme from 'hooks/useTheme'
+import useTheme from 'lib/useTheme'
 
 export default function Header() {
   const { toggleTheme } = useTheme()
