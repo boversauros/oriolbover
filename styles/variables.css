@@ -19,8 +19,3 @@
   --color-secondary: #999;
   --border-color: #dcdcdc;
 }
-
-@custom-media --sm (min-width: 576px);
-@custom-media --md (min-width: 768px);
-@custom-media --lg (min-width: 992px);
-@custom-media --xl (min-width: 1200px);
