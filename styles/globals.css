@@ -135,8 +135,8 @@ footer {
   }
 }
 /* extra large view */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     width: 1140px;
   }
-}
+} */
