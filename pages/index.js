@@ -24,7 +24,11 @@ function Home({ repos }) {
           <ul className={style.list}>
             {repositories.nodes.map((node) => (
               <li key={node.name} className={style.listItem}>
-                <h3 className={style.listTitle}>{node.name}</h3>
+                <h3 className={style.listTitle}>
+                  <a href={node.url} target="_blank" rel="noreferrer">
+                    {node.name}
+                  </a>
+                </h3>
                 <div className={style.listDataTime}>
                   <small>{node.updatedAt} • </small>
                   {node.languages.edges.map((language) => (
