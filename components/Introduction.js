@@ -10,7 +10,7 @@ export default function Introduction() {
       <h1>{salute}</h1>
       <p className={style.iParagraph}>
         My name is <strong>Oriol Bover</strong>. I am a full stack developer
-        living in Barcelona, Spain. I am currently working at{' '}
+        from Barcelona, Spain. I am currently working at{' '}
         <a
           href="https://www.xxxl.digital"
           target="_blank"
@@ -29,6 +29,25 @@ export default function Introduction() {
           Github
         </a>{' '}
         page.
+      </p>
+      <p className={style.iParagraph}>
+        Feel free to contact me writing to my{' '}
+        <a href="mailto:bover73@gmail.com" className={style.iLink}>
+          email
+        </a>{' '}
+        or write to me on{' '}
+        <a
+          href="https://www.linkedin.com/in/oriol-bover/"
+          target="_blank"
+          rel="noreferrer"
+          className={style.iLink}
+        >
+          Linkedin
+        </a>
+        .
+      </p>
+      <p className={style.iParagraph}>
+        Also you can check some of my latest <strong>projects</strong>.
       </p>
     </section>
   )

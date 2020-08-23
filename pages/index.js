@@ -5,14 +5,15 @@ import Svg from 'components/Svg'
 import style from 'styles/components/repositories.module.css'
 import { getRepos } from 'lib/api'
 import PropTypes from 'prop-types'
+import dayjs from 'dayjs'
 
-function Home({ repos }) {
+function Home({ repos = {} }) {
   const {
     viewer: { repositories },
   } = repos
 
   return (
-    <div>
+    <>
       <Head>
         <title>{'>'} Oriol Bover 👨‍💻</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,30 +22,37 @@ function Home({ repos }) {
       <main className="content">
         <Introduction />
         <section className="container">
-          <ul className={style.list}>
-            {repositories.nodes.map((node) => (
-              <li key={node.name} className={style.listItem}>
-                <h3 className={style.listTitle}>
-                  <a href={node.url} target="_blank" rel="noreferrer">
-                    {node.name}
-                  </a>
-                </h3>
-                <div className={style.listDataTime}>
-                  <small>{node.updatedAt} • </small>
-                  {node.languages.edges.map((language) => (
-                    <Svg
-                      key={language.node.name}
-                      iconType={language.node.name}
-                    />
-                  ))}
-                </div>
-                <p>{node.description}</p>
-              </li>
-            ))}
-          </ul>
+          {repositories && (
+            <ul className={style.list}>
+              {repositories.nodes.map((node) => (
+                <li key={node.name} className={style.listItem}>
+                  <h3 className={style.listTitle}>
+                    <a href={node.url} target="_blank" rel="noreferrer">
+                      {node.name}
+                    </a>
+                  </h3>
+                  <div className={style.listDataTime}>
+                    <small>
+                      {dayjs(node.createdAt).format('DD MMMM YYYY')} •{' '}
+                    </small>
+                    {node.languages.edges.map((language) => (
+                      <Svg
+                        key={language.node.name}
+                        iconType={language.node.name}
+                      />
+                    ))}
+                  </div>
+                  <p>{node.description}</p>
+                </li>
+              ))}
+            </ul>
+          )}
         </section>
       </main>
-    </div>
+      <footer>
+        <p>© {dayjs().year()} Oriol Bover Vila | Built with Next.js</p>
+      </footer>
+    </>
   )
 }
 
