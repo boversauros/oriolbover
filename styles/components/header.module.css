@@ -47,6 +47,10 @@
   position: relative;
 }
 
+.right svg {
+  cursor: pointer;
+}
+
 @keyframes cursor {
   0% {
     opacity: 0;
