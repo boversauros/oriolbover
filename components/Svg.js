@@ -45,13 +45,20 @@ const iconNames = {
 
 function Svg({ iconType }) {
   return (
-    <svg viewBox="0 0 128 128">
-      {iconNames[iconType].length < 2 ? (
-        <path {...iconNames[iconType][0]}></path>
-      ) : (
-        iconNames[iconType].map((icon) => <path key={icon.d} {...icon}></path>)
+    <>
+      {iconNames[iconType] && (
+        <svg viewBox="0 0 128 128">
+          <title>{`${iconType}-icon`}</title>
+          {iconNames[iconType].length < 2 ? (
+            <path {...iconNames[iconType][0]}></path>
+          ) : (
+            iconNames[iconType].map((icon) => (
+              <path key={icon.d} {...icon}></path>
+            ))
+          )}
+        </svg>
       )}
-    </svg>
+    </>
   )
 }
 Svg.propTypes = {

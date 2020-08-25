@@ -96,7 +96,6 @@ footer {
   margin-top: 2rem;
   padding: 0 20px;
 }
-
 /* small view */
 @media (min-width: 576px) {
   .container {
@@ -133,13 +132,6 @@ footer {
 /* large view */
 @media (min-width: 992px) {
   .container {
-    /* width: 960px; */
-    width: 800px;
+    width: 960px;
   }
 }
-/* extra large view */
-/* @media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-} */

@@ -12,11 +12,15 @@
   color: var(--primary);
 }
 
-.listDataTime {
-  display: flex;
-}
-
 .listDataTime svg {
   width: 20px;
   margin-left: 0.5rem;
+}
+
+/* small view */
+@media (min-width: 576px) {
+  .listDataTime {
+    display: -webkit-flex;
+    display: flex;
+  }
 }

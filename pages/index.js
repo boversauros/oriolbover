@@ -9,7 +9,7 @@ import dayjs from 'dayjs'
 
 function Home({ repos = {} }) {
   const {
-    viewer: { repositories },
+    viewer: { repositories = [] },
   } = repos
 
   return (
@@ -33,7 +33,7 @@ function Home({ repos = {} }) {
                   </h3>
                   <div className={style.listDataTime}>
                     <small>
-                      {dayjs(node.createdAt).format('DD MMMM YYYY')} •{' '}
+                      {dayjs(node.createdAt).format('DD MMMM YYYY')}
                     </small>
                     {node.languages.edges.map((language) => (
                       <Svg
