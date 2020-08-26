@@ -1,17 +1,11 @@
 import Head from 'next/head'
 import Header from 'components/Header'
 import Introduction from 'components/Introduction'
-import Svg from 'components/Svg'
-import style from 'styles/components/repositories.module.css'
+import Repositories from 'components/Repositories'
 import { getRepos } from 'lib/api'
 import PropTypes from 'prop-types'
-import dayjs from 'dayjs'
 
-function Home({ repos = {} }) {
-  const {
-    viewer: { repositories = [] },
-  } = repos
-
+function Home({ repos }) {
   return (
     <>
       <Head>
@@ -20,37 +14,17 @@ function Home({ repos = {} }) {
       </Head>
       <Header />
       <main className="content">
-        <Introduction />
-        <section className="container">
-          {repositories && (
-            <ul className={style.list}>
-              {repositories.nodes.map((node) => (
-                <li key={node.name} className={style.listItem}>
-                  <h3 className={style.listTitle}>
-                    <a href={node.url} target="_blank" rel="noreferrer">
-                      {node.name}
-                    </a>
-                  </h3>
-                  <div className={style.listDataTime}>
-                    <small>
-                      {dayjs(node.createdAt).format('DD MMMM YYYY')}
-                    </small>
-                    {node.languages.edges.map((language) => (
-                      <Svg
-                        key={language.node.name}
-                        iconType={language.node.name}
-                      />
-                    ))}
-                  </div>
-                  <p>{node.description}</p>
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
+        <Introduction withRepos={!!repos} />
+        {repos && <Repositories repos={repos.viewer.repositories} />}
       </main>
       <footer>
-        <p>© {dayjs().year()} Oriol Bover Vila | Built with Next.js</p>
+        <p>
+          © {new Date().getFullYear()} Oriol Bover Vila <span>|</span> Built
+          with{' '}
+          <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+            Next.js
+          </a>
+        </p>
       </footer>
     </>
   )

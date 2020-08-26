@@ -85,6 +85,10 @@ footer {
   margin-bottom: 1rem;
 }
 
+footer a:hover {
+  color: var(--primary);
+}
+
 /* global classes */
 .container {
   width: 100%;
@@ -100,6 +104,11 @@ footer {
 @media (min-width: 576px) {
   .container {
     width: 540px;
+  }
+
+  footer span {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 

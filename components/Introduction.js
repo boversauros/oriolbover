@@ -1,10 +1,10 @@
 import React from 'react'
 import useSalute from 'lib/useSalute'
+import PropTypes from 'prop-types'
 import style from 'styles/components/introduction.module.css'
 
-export default function Introduction() {
+const Introduction = ({ withRepos }) => {
   const salute = useSalute()
-
   return (
     <section className="container">
       <h1>{salute}</h1>
@@ -46,9 +46,17 @@ export default function Introduction() {
         </a>
         .
       </p>
-      <p className={style.iParagraph}>
-        Also you can check some of my latest <strong>projects</strong>.
-      </p>
+      {withRepos && (
+        <p className={style.iParagraph}>
+          Also you can check some of my latest <strong>projects</strong>.
+        </p>
+      )}
     </section>
   )
 }
+
+Introduction.propTypes = {
+  withRepos: PropTypes.bool,
+}
+
+export default Introduction
