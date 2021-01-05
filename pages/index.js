@@ -30,15 +30,14 @@ function Home({ repos }) {
   )
 }
 
-Home.propTypes = {
-  repos: PropTypes.object,
-}
-
-export default Home
-
 export async function getStaticProps() {
   const repos = await getRepos()
   return {
     props: { repos },
   }
 }
+Home.propTypes = {
+  repos: PropTypes.object,
+}
+
+export default Home
