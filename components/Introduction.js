@@ -47,9 +47,12 @@ const Introduction = ({ withRepos }) => {
         .
       </p>
       {withRepos && (
-        <p className={style.iParagraph}>
-          Also you can check some of my latest <strong>projects</strong>.
-        </p>
+        <>
+          <p className={style.iParagraph}>
+            Also you can check some of my latest <strong>projects</strong>.
+          </p>
+          <hr/>
+        </>
       )}
     </section>
   )
