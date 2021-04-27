@@ -39,6 +39,9 @@
     display: flex;
     padding: 0;
     list-style: none;
-    gap: 8px;
+  }
+
+  .languageList li {
+    margin-right: 8px;
   }
 }
