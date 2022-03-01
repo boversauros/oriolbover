@@ -9,7 +9,7 @@ const Introduction = ({ withRepos }) => {
     <section className="container">
       <h1>{salute}</h1>
       <p className={style.iParagraph}>
-        My name is <strong>Oriol Bover</strong>. I am a full stack developer
+        My name is <strong>Oriol Bover</strong>. I am a full-stack developer
         from Barcelona, Spain. I am currently working at{' '}
         <a
           href="https://www.xxxl.digital"
@@ -19,7 +19,7 @@ const Introduction = ({ withRepos }) => {
         >
           XXXLdigital
         </a>
-        . I use to develop side projects in my free time. You can find my work on my personal{' '}
+        . I used to develop side projects in my free time. You can find my work on my personal{' '}
         <a
           href="https://www.github.com/boversauros"
           target="_blank"
@@ -31,11 +31,11 @@ const Introduction = ({ withRepos }) => {
         page.
       </p>
       <p className={style.iParagraph}>
-        Feel free to contact me writing to my{' '}
+        Feel free to contact me by writing to my{' '}
         <a href="mailto:bover73@gmail.com" className={style.iLink}>
           email
         </a>{' '}
-        or write to me on{' '}
+        or on{' '}
         <a
           href="https://www.linkedin.com/in/oriol-bover/"
           target="_blank"
@@ -49,7 +49,7 @@ const Introduction = ({ withRepos }) => {
       {withRepos && (
         <>
           <p className={style.iParagraph}>
-            Also you can check some of my latest <strong>projects</strong>.
+            Also, you can check some of my latest <strong>projects</strong>.
           </p>
           <hr/>
         </>
