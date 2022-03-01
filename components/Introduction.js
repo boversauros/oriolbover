@@ -19,7 +19,7 @@ const Introduction = ({ withRepos }) => {
         >
           XXXLdigital
         </a>
-        . I used to develop side projects in my free time. You can find my work on my personal{' '}
+        . Usually, I used to develop side projects in my free time. You can find my work on my personal{' '}
         <a
           href="https://www.github.com/boversauros"
           target="_blank"
