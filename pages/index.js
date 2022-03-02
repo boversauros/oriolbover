@@ -19,7 +19,7 @@ function Home({ repos }) {
       </main>
       <footer>
         <p>
-          © {new Date().getFullYear()} Oriol Bover Vila <span>|</span> Built
+          {new Date().getFullYear()} Oriol Bover Vila <span>|</span> Built
           with{' '}
           <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
             Next.js
