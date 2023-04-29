@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "classnames": "2.2.6",
     "next": "13.3.1",
