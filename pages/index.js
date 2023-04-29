@@ -9,7 +9,7 @@ function Home({ repos }) {
   return (
     <>
       <Head>
-        <title>{'>'} Oriol Bover 👨‍💻</title>
+        <title>Oriol Bover 👨‍💻</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
@@ -19,8 +19,7 @@ function Home({ repos }) {
       </main>
       <footer>
         <p>
-          {new Date().getFullYear()} Oriol Bover Vila <span>|</span> Built
-          with{' '}
+          {new Date().getFullYear()} Oriol Bover Vila <span>|</span> Built with{' '}
           <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
             Next.js
           </a>
@@ -32,6 +31,7 @@ function Home({ repos }) {
 
 export async function getStaticProps() {
   const repos = await getRepos()
+
   return {
     props: { repos },
   }
