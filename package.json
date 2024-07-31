@@ -7,7 +7,6 @@
     "build": "node scripts/build.js",
     "update-data": "node  --env-file=.env scripts/update-data.js",
     "predeploy": "npm run update-data && npm run build",
-    "deploy": "netlify deploy --prod",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
