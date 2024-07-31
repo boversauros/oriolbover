@@ -1,4 +1,4 @@
-# Oriol Bover's Portfolio
+# My Portfolio
 
 This repository contains the source code for Oriol Bover's personal portfolio website. The site showcases recent projects and is automatically updated with the latest GitHub repository information.
 
