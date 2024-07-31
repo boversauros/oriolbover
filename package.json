@@ -1,0 +1,29 @@
+{
+  "name": "oriolbover",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "update-data": "node  --env-file=.env scripts/update-data.js",
+    "predeploy": "npm run update-data && npm run build",
+    "deploy": "netlify deploy --prod",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "development"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Oriol Bover's portfolio website",
+  "devDependencies": {
+    "eslint": "9.8.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "prettier": "3.3.3"
+  }
+}

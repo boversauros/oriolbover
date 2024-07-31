@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oriol Bover - Software Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title-area">
+          <h1>Oriol Bover</h1>
+          <p class="tagline">Software Developer | Web Specialist</p>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☼</button>
+      </header>
+
+      <section>
+        <p>
+          With over 6 years of experience in web technologies, I like to learn how to craft
+          efficient solutions across the full stack.
+        </p>
+      </section>
+
+      <section>
+        <h2>Recent Works</h2>
+        <ul>
+          <!-- RECENT_WORKS_PLACEHOLDER -->
+        </ul>
+      </section>
+
+      <section class="contact-info">
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:bover73@gmail.com">Mail</a> •
+          <a href="https://www.linkedin.com/in/oriorbover" target="_blank" rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </p>
+      </section>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function setTheme(theme) {
+        document.body.setAttribute('data-theme', theme);
+        themeToggle.innerHTML = theme === 'dark' ? '☼' : '☾';
+        localStorage.setItem('theme', theme);
+      }
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (prefersDarkScheme.matches) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme');
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      });
+
+      prefersDarkScheme.addListener((e) => {
+        setTheme(e.matches ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>

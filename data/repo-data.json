@@ -1,0 +1,59 @@
+[
+  {
+    "name": "nextjs-dashboard",
+    "url": "https://github.com/boversauros/nextjs-dashboard",
+    "description": "Next.js dashboard tutorial",
+    "updatedAt": "2024-04-04T09:42:48Z",
+    "createdAt": "2024-04-04T09:40:31Z",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
+    "name": "webpack-react-ssr",
+    "url": "https://github.com/boversauros/webpack-react-ssr",
+    "description": "experimental webpack react ssr project",
+    "updatedAt": "2023-07-29T12:36:23Z",
+    "createdAt": "2023-07-29T12:33:18Z",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "name": "live-coding",
+    "url": "https://github.com/boversauros/live-coding",
+    "description": "This repository, `live-coding`, is a storage for different live coding exercises.",
+    "updatedAt": "2023-06-19T21:17:41Z",
+    "createdAt": "2023-06-19T21:17:40Z",
+    "languages": []
+  },
+  {
+    "name": "react-projects",
+    "url": "https://github.com/boversauros/react-projects",
+    "description": "Multiproject repository built with npm workspaces and designed for practicing React",
+    "updatedAt": "2023-03-09T02:15:21Z",
+    "createdAt": "2023-02-27T20:42:21Z",
+    "languages": [
+      "CSS",
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ]
+  },
+  {
+    "name": "kudos-app",
+    "url": "https://github.com/boversauros/kudos-app",
+    "description": "A site where users can create an account, log in, and give kudos to other site users.",
+    "updatedAt": "2023-03-09T02:15:21Z",
+    "createdAt": "2022-11-28T12:25:14Z",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  }
+]
