@@ -19,13 +19,13 @@ async function buildSite() {
     const recentWorksHtml = repoData
       .map(
         (repo) => `
-      <div class="project">
+      <li class="project">
         <h3><a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></h3>
         <p>${repo.description || 'No description available.'}</p>
         <div class="project-tags">
           ${repo.languages.join(' • ')}
         </div>
-      </div>
+      </li>
     `
       )
       .join('');
@@ -43,6 +43,18 @@ async function buildSite() {
     await copyFile(
       path.join(__dirname, '..', 'src', 'styles.css'),
       path.join(__dirname, '..', 'dist', 'styles.css')
+    );
+
+    // Copy robots.txt file to dist directory
+    await copyFile(
+      path.join(__dirname, '..', 'public', 'robots.txt'),
+      path.join(__dirname, '..', 'dist', 'robots.txt')
+    );
+
+    // Copy sitemap file to dist directory
+    await copyFile(
+      path.join(__dirname, '..', 'public', 'sitemap.xml'),
+      path.join(__dirname, '..', 'dist', 'sitemap.xml')
     );
 
     console.log('Site built successfully! 🚀');
