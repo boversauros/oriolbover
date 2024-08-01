@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "update-data": "node  --env-file=.env scripts/update-data.js",
+    "update-data:ci": "node scripts/update-data.js",
     "predeploy": "npm run update-data && npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

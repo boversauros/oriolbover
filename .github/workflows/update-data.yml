@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: Update repo data
-        run: npm run update-data
+        run: npm run update-data:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
