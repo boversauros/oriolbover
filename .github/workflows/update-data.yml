@@ -22,7 +22,7 @@ jobs:
       - name: Update repo data
         run: npm run update-data:ci
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Commit and push if changed
         run: |
