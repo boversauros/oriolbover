@@ -1,5 +1,17 @@
 [
   {
+    "name": "oriolbover",
+    "url": "https://github.com/boversauros/oriolbover",
+    "description": "My personal website",
+    "updatedAt": "2024-08-01T09:02:46Z",
+    "createdAt": "2024-07-31T16:06:58Z",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
     "name": "nextjs-dashboard",
     "url": "https://github.com/boversauros/nextjs-dashboard",
     "description": "Next.js dashboard tutorial",
@@ -42,18 +54,6 @@
       "TypeScript",
       "JavaScript",
       "HTML"
-    ]
-  },
-  {
-    "name": "kudos-app",
-    "url": "https://github.com/boversauros/kudos-app",
-    "description": "A site where users can create an account, log in, and give kudos to other site users.",
-    "updatedAt": "2023-03-09T02:15:21Z",
-    "createdAt": "2022-11-28T12:25:14Z",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
     ]
   }
 ]
