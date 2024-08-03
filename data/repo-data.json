@@ -1,9 +1,20 @@
 [
   {
+    "name": "boversauros-design-tokens",
+    "url": "https://github.com/boversauros/boversauros-design-tokens",
+    "description": "A proof of concept demonstrating how to deploy design tokens via npm and CDN using GitHub Actions.",
+    "updatedAt": "2024-08-02T15:53:09Z",
+    "createdAt": "2024-08-02T15:49:13Z",
+    "languages": [
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
     "name": "oriolbover",
     "url": "https://github.com/boversauros/oriolbover",
     "description": "My personal website 👨‍💻",
-    "updatedAt": "2024-08-01T12:14:51Z",
+    "updatedAt": "2024-08-02T10:13:23Z",
     "createdAt": "2024-07-31T16:06:58Z",
     "languages": [
       "JavaScript",
@@ -42,18 +53,5 @@
     "updatedAt": "2023-06-19T21:17:41Z",
     "createdAt": "2023-06-19T21:17:40Z",
     "languages": []
-  },
-  {
-    "name": "react-projects",
-    "url": "https://github.com/boversauros/react-projects",
-    "description": "Multiproject repository built with npm workspaces and designed for practicing React",
-    "updatedAt": "2023-03-09T02:15:21Z",
-    "createdAt": "2023-02-27T20:42:21Z",
-    "languages": [
-      "CSS",
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ]
   }
 ]
