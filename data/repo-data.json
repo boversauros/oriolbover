@@ -1,13 +1,5 @@
 [
   {
-    "name": "skills-test-with-actions",
-    "url": "https://github.com/boversauros/skills-test-with-actions",
-    "description": "My clone repository",
-    "updatedAt": "2024-08-23T11:49:37Z",
-    "createdAt": "2024-08-23T11:34:05Z",
-    "languages": []
-  },
-  {
     "name": "boversauros-design-tokens",
     "url": "https://github.com/boversauros/boversauros-design-tokens",
     "description": "A proof of concept demonstrating how to deploy design tokens via npm and CDN using GitHub Actions.",
@@ -22,7 +14,7 @@
     "name": "oriolbover",
     "url": "https://github.com/boversauros/oriolbover",
     "description": "My personal website 👨‍💻",
-    "updatedAt": "2024-08-07T10:55:21Z",
+    "updatedAt": "2024-08-25T16:02:28Z",
     "createdAt": "2024-07-31T16:06:58Z",
     "languages": [
       "JavaScript",
@@ -53,5 +45,13 @@
       "HTML",
       "CSS"
     ]
+  },
+  {
+    "name": "live-coding",
+    "url": "https://github.com/boversauros/live-coding",
+    "description": "This repository, `live-coding`, is a storage for different live coding exercises.",
+    "updatedAt": "2023-06-19T21:17:41Z",
+    "createdAt": "2023-06-19T21:17:40Z",
+    "languages": []
   }
 ]
