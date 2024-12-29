@@ -1,5 +1,15 @@
 [
   {
+    "name": "backend-practice",
+    "url": "https://github.com/boversauros/backend-practice",
+    "description": "A repository practicing backend development projects in Go",
+    "updatedAt": "2024-12-27T20:11:00Z",
+    "createdAt": "2024-12-23T15:23:54Z",
+    "languages": [
+      "Go"
+    ]
+  },
+  {
     "name": "devops-practice",
     "url": "https://github.com/boversauros/devops-practice",
     "description": "DevOps learning journey showcasing various projects from beginner to advanced, implementing key concepts and tools in a structured monorepo format.",
@@ -24,7 +34,7 @@
     "name": "oriolbover",
     "url": "https://github.com/boversauros/oriolbover",
     "description": "My personal website 👨‍💻",
-    "updatedAt": "2024-11-20T16:32:51Z",
+    "updatedAt": "2024-12-19T13:01:45Z",
     "createdAt": "2024-07-31T16:06:58Z",
     "languages": [
       "JavaScript",
@@ -41,18 +51,6 @@
     "languages": [
       "TypeScript",
       "JavaScript",
-      "CSS"
-    ]
-  },
-  {
-    "name": "webpack-react-ssr",
-    "url": "https://github.com/boversauros/webpack-react-ssr",
-    "description": "experimental webpack react ssr project",
-    "updatedAt": "2023-07-29T12:36:23Z",
-    "createdAt": "2023-07-29T12:33:18Z",
-    "languages": [
-      "JavaScript",
-      "HTML",
       "CSS"
     ]
   }
