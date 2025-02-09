@@ -1,5 +1,18 @@
 [
   {
+    "name": "tonibover",
+    "url": "https://github.com/boversauros/tonibover",
+    "description": "Personal site for Toni Bover",
+    "updatedAt": "2025-02-08T20:02:03Z",
+    "createdAt": "2025-01-31T15:42:53Z",
+    "languages": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
     "name": "backend-practice",
     "url": "https://github.com/boversauros/backend-practice",
     "description": "A repository practicing backend development projects in Go",
@@ -34,23 +47,11 @@
     "name": "oriolbover",
     "url": "https://github.com/boversauros/oriolbover",
     "description": "My personal website 👨‍💻",
-    "updatedAt": "2025-01-31T15:49:53Z",
+    "updatedAt": "2025-02-02T15:54:40Z",
     "createdAt": "2024-07-31T16:06:58Z",
     "languages": [
       "JavaScript",
       "HTML",
-      "CSS"
-    ]
-  },
-  {
-    "name": "nextjs-dashboard",
-    "url": "https://github.com/boversauros/nextjs-dashboard",
-    "description": "Next.js dashboard tutorial",
-    "updatedAt": "2024-04-04T09:42:48Z",
-    "createdAt": "2024-04-04T09:40:31Z",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
       "CSS"
     ]
   }
