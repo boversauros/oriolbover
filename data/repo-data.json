@@ -1,15 +1,27 @@
 [
   {
+    "name": "gh-deployment-workflow",
+    "url": "https://github.com/boversauros/gh-deployment-workflow",
+    "description": "Basic Vite project for GitHub Pages deployment",
+    "updatedAt": "2025-02-14T17:08:29Z",
+    "createdAt": "2025-02-12T18:12:23Z",
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
     "name": "tonibover",
     "url": "https://github.com/boversauros/tonibover",
     "description": "Personal site for Toni Bover",
-    "updatedAt": "2025-02-08T20:02:03Z",
+    "updatedAt": "2025-02-10T18:49:35Z",
     "createdAt": "2025-01-31T15:42:53Z",
     "languages": [
       "Astro",
       "TypeScript",
-      "JavaScript",
-      "CSS"
+      "CSS",
+      "JavaScript"
     ]
   },
   {
@@ -41,18 +53,6 @@
     "languages": [
       "CSS",
       "JavaScript"
-    ]
-  },
-  {
-    "name": "oriolbover",
-    "url": "https://github.com/boversauros/oriolbover",
-    "description": "My personal website 👨‍💻",
-    "updatedAt": "2025-02-02T15:54:40Z",
-    "createdAt": "2024-07-31T16:06:58Z",
-    "languages": [
-      "JavaScript",
-      "HTML",
-      "CSS"
     ]
   }
 ]
