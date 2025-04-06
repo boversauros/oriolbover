@@ -1,5 +1,17 @@
 [
   {
+    "name": "admintonibover",
+    "url": "https://github.com/boversauros/admintonibover",
+    "description": "Admin site for Toni Bover personal site",
+    "updatedAt": "2025-04-05T17:38:40Z",
+    "createdAt": "2025-03-30T17:49:10Z",
+    "languages": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
     "name": "gh-deployment-workflow",
     "url": "https://github.com/boversauros/gh-deployment-workflow",
     "description": "Basic Vite project for GitHub Pages deployment",
@@ -42,17 +54,6 @@
     "createdAt": "2024-10-11T11:35:38Z",
     "languages": [
       "Shell"
-    ]
-  },
-  {
-    "name": "boversauros-design-tokens",
-    "url": "https://github.com/boversauros/boversauros-design-tokens",
-    "description": "A proof of concept demonstrating how to deploy design tokens via npm and CDN using GitHub Actions.",
-    "updatedAt": "2024-09-17T13:14:07Z",
-    "createdAt": "2024-08-02T15:49:13Z",
-    "languages": [
-      "CSS",
-      "JavaScript"
     ]
   }
 ]
