@@ -1,5 +1,17 @@
 [
   {
+    "name": "primitives",
+    "url": "https://github.com/boversauros/primitives",
+    "description": "Color, typography, and spacing primitives in json.",
+    "updatedAt": "2025-04-16T08:20:50Z",
+    "createdAt": "2025-04-16T08:20:50Z",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Shell"
+    ]
+  },
+  {
     "name": "admintonibover",
     "url": "https://github.com/boversauros/admintonibover",
     "description": "Admin site for Toni Bover personal site",
@@ -44,16 +56,6 @@
     "createdAt": "2024-12-23T15:23:54Z",
     "languages": [
       "Go"
-    ]
-  },
-  {
-    "name": "devops-practice",
-    "url": "https://github.com/boversauros/devops-practice",
-    "description": "DevOps learning journey showcasing various projects from beginner to advanced, implementing key concepts and tools in a structured monorepo format.",
-    "updatedAt": "2024-10-28T14:37:48Z",
-    "createdAt": "2024-10-11T11:35:38Z",
-    "languages": [
-      "Shell"
     ]
   }
 ]
