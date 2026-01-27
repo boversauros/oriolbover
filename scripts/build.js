@@ -19,16 +19,20 @@ async function buildSite() {
     const recentWorksHtml = repoData
       .map(
         (repo) => `
-      <li class="project">
-        <h3><a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></h3>
-        <p>${repo.description || 'No description available.'}</p>
-        <div class="project-tags">
-          ${repo.languages.join(' • ')}
-        </div>
-      </li>
-    `
+          <li class="project">
+            <div class="project-header">
+              <h3 class="project-name">
+                <a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+              </h3>
+              <span class="project-arrow">→</span>
+            </div>
+            <p class="project-description">${repo.description || 'No description available.'}</p>
+            <div class="project-tags">
+              ${repo.languages.map((lang) => `<span class="project-tag">${lang}</span>`).join('')}
+            </div>
+          </li>`
       )
-      .join('');
+      .join('\n');
 
     // Replace placeholder in HTML template
     htmlTemplate = htmlTemplate.replace('<!-- RECENT_WORKS_PLACEHOLDER -->', recentWorksHtml);

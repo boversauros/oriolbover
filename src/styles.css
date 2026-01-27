@@ -1,117 +1,331 @@
+/*
+ * Japanese-inspired minimalist design
+ * Principles: Ma (空間), Kanso (簡素), Seijaku (静寂)
+ */
+
+/* ===== Design Tokens ===== */
 :root {
-  --text-color: #333333;
-  --background-color: #fafafa;
-  --accent-color: #4a4a4a;
-  --subtle-color: #e0e0e0;
+  /* Light theme - warm paper tones */
+  --color-bg: #f8f6f3;
+  --color-bg-subtle: #f0eeeb;
+  --color-text: #3d3d3d;
+  --color-text-muted: #6b6b6b;
+  --color-accent: #8b9d83;
+  --color-border: #e4e0db;
+  --color-hover: #7a8c72;
+
+  /* Spacing - generous Ma */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 2rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --line-height: 1.7;
+  --letter-spacing: 0.01em;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
 }
+
+/* Dark theme - deep ink tones */
 [data-theme='dark'] {
-  --text-color: #e0e0e0;
-  --background-color: #1a1a1a;
-  --accent-color: #b0b0b0;
-  --subtle-color: #333333;
+  --color-bg: #1a1a1a;
+  --color-bg-subtle: #242424;
+  --color-text: #e8e4df;
+  --color-text-muted: #9a9590;
+  --color-accent: #a3b89a;
+  --color-border: #333330;
+  --color-hover: #b8c9b0;
 }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
+
+/* ===== Base Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* ===== Body & Container ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
+    color var(--transition-base),
+    background-color var(--transition-base);
+  min-height: 100vh;
 }
+
 .container {
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: var(--space-xl) var(--space-md);
 }
-header {
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--space-lg) var(--space-sm);
+  }
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}
+
+.role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ===== Introduction ===== */
+.intro {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+.intro p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-sm) auto 0;
+}
+
+/* ===== Projects ===== */
+.works {
+  margin-bottom: var(--space-xl);
+}
+
+.project-list {
+  list-style: none;
+}
+
+.project {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition-fast);
+}
+
+.project:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.project:hover {
+  border-color: var(--color-accent);
+}
+
+.project-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 2em;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
-.title-area {
-  flex-grow: 1;
+
+.project-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
 }
-h1,
-h2,
-h3 {
-  font-weight: 400;
-}
-h1 {
-  font-size: 2.5em;
-  margin: 0 0 0.2em;
-  letter-spacing: -0.5px;
-}
-h2 {
-  font-size: 1.5em;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  color: var(--accent-color);
-}
-h3 {
-  font-size: 1.2em;
-  margin-bottom: 0.2em;
-}
-p {
-  margin-bottom: 1.5em;
-}
-a {
-  color: var(--text-color);
+
+.project-name a {
+  color: var(--color-text);
   text-decoration: none;
-  border-bottom: 1px solid var(--subtle-color);
-  transition: border-color 0.3s ease;
+  transition: color var(--transition-fast);
 }
-a:hover {
-  border-bottom-color: var(--text-color);
+
+.project-name a:hover {
+  color: var(--color-accent);
 }
-ul {
-  padding-left: 0;
-  list-style-type: none;
+
+.project-arrow {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
-li {
-  margin-bottom: 2em;
+
+.project:hover .project-arrow {
+  color: var(--color-accent);
+  transform: translateX(4px);
 }
-.tagline {
-  font-size: 1em;
-  color: var(--accent-color);
-  margin: 0;
-}
-.project {
-  border-left: 2px solid var(--subtle-color);
-  padding-left: 15px;
-  transition: border-color 0.3s ease;
-}
-.project:hover {
-  border-left-color: var(--accent-color);
-}
+
 .project-description {
-  font-size: 0.95em;
-  margin-top: 0.3em;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
 }
+
 .project-tags {
-  margin-top: 0.5em;
-  font-size: 0.85em;
-  color: var(--accent-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
 }
-.contact-info {
-  margin-top: 3em;
-  padding-top: 1em;
-  border-top: 1px solid var(--subtle-color);
+
+.project-tag {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  padding: 0.125rem 0.5rem;
+  background-color: var(--color-bg-subtle);
+  border-radius: 2px;
+  letter-spacing: 0.02em;
 }
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding-top: var(--space-lg);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.contact-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
+.separator {
+  width: 3px;
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: 50%;
+}
+
+/* ===== Theme Toggle ===== */
 .theme-toggle {
-  background: none;
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 40px;
+  height: 40px;
   border: none;
-  color: var(--text-color);
-  font-size: 1.5em;
+  background: transparent;
   cursor: pointer;
-  transition: color 0.3s ease;
-  padding: 0;
-  margin-left: 15px;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity var(--transition-fast);
 }
+
 .theme-toggle:hover {
-  color: var(--accent-color);
+  opacity: 0.7;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--color-text-muted);
+  border-radius: 50%;
+  position: relative;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-fast);
+}
+
+/* Light mode: empty circle (moon) */
+[data-theme='light'] .theme-icon,
+:root:not([data-theme]) .theme-icon {
+  background-color: transparent;
+}
+
+/* Dark mode: filled circle (sun) */
+[data-theme='dark'] .theme-icon {
+  background-color: var(--color-text-muted);
+}
+
+.theme-toggle:hover .theme-icon {
+  border-color: var(--color-accent);
+}
+
+[data-theme='dark'] .theme-toggle:hover .theme-icon {
+  background-color: var(--color-accent);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ===== Focus States ===== */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
