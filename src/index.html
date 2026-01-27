@@ -10,6 +10,12 @@
 
     <title>Oriol Bover - Software Developer</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -23,50 +29,59 @@
     </script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="title-area">
-          <h1>Oriol Bover</h1>
-          <p class="tagline">Software Developer | Web Specialist</p>
-        </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☼</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon"></span>
+    </button>
+
+    <main class="container">
+      <header class="header">
+        <h1 class="name">Oriol Bover</h1>
+        <p class="role">Software Developer</p>
       </header>
 
-      <section>
+      <section class="intro">
         <p>
-          With over 7 years of experience in web technologies, I like to learn how to craft
-          efficient solutions across the full stack.
+          Seven years crafting web experiences.<br />
+          Building with care, learning with curiosity.
         </p>
       </section>
 
-      <section>
-        <h2>Recent Works</h2>
-        <ul>
+      <section class="works">
+        <h2 class="section-title">Recent Works</h2>
+        <ul class="project-list">
           <!-- RECENT_WORKS_PLACEHOLDER -->
         </ul>
       </section>
 
-      <section class="contact-info">
-        <h2>Contact</h2>
-        <p>
-          <a href="mailto:bover73@gmail.com">Mail</a> •
+      <footer class="footer">
+        <nav class="contact-links">
+          <a href="mailto:bover73@gmail.com" class="contact-link">Mail</a>
+          <span class="separator"></span>
           <a
             href="https://www.linkedin.com/in/oriol-bover/"
             target="_blank"
             rel="noopener noreferrer"
+            class="contact-link"
             >LinkedIn</a
           >
-        </p>
-      </section>
-    </div>
+          <span class="separator"></span>
+          <a
+            href="https://github.com/boversauros"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+            >GitHub</a
+          >
+        </nav>
+      </footer>
+    </main>
 
     <script>
       const themeToggle = document.getElementById('themeToggle');
       const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
       function setTheme(theme) {
-        document.body.setAttribute('data-theme', theme);
-        themeToggle.innerHTML = theme === 'dark' ? '☼' : '☾';
+        document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
       }
 
@@ -80,12 +95,14 @@
       }
 
       themeToggle.addEventListener('click', () => {
-        const currentTheme = document.body.getAttribute('data-theme');
+        const currentTheme = document.documentElement.getAttribute('data-theme');
         setTheme(currentTheme === 'dark' ? 'light' : 'dark');
       });
 
-      prefersDarkScheme.addListener((e) => {
-        setTheme(e.matches ? 'dark' : 'light');
+      prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
       });
     </script>
   </body>
