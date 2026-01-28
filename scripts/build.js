@@ -20,16 +20,16 @@ async function buildSite() {
       .map(
         (repo) => `
           <li class="project">
-            <div class="project-header">
-              <h3 class="project-name">
-                <a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
-              </h3>
-              <span class="project-arrow">→</span>
-            </div>
-            <p class="project-description">${repo.description || 'No description available.'}</p>
-            <div class="project-tags">
-              ${repo.languages.map((lang) => `<span class="project-tag">${lang}</span>`).join('')}
-            </div>
+            <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="project-link">
+              <div class="project-header">
+                <h3 class="project-name">${repo.name}</h3>
+                <span class="project-arrow">→</span>
+              </div>
+              <p class="project-description">${repo.description || 'No description available.'}</p>
+              <div class="project-tags">
+                ${repo.languages.map((lang) => `<span class="project-tag">${lang}</span>`).join('')}
+              </div>
+            </a>
           </li>`
       )
       .join('\n');
