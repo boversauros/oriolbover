@@ -5,6 +5,21 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/**
+ * Escapes HTML special characters to prevent XSS and layout issues
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped text safe for HTML insertion
+ */
+function escapeHtml(text) {
+  if (!text) return '';
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 async function buildSite() {
   try {
     // Read repo data
@@ -20,16 +35,16 @@ async function buildSite() {
       .map(
         (repo) => `
           <li class="project">
-            <div class="project-header">
-              <h3 class="project-name">
-                <a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
-              </h3>
-              <span class="project-arrow">→</span>
-            </div>
-            <p class="project-description">${repo.description || 'No description available.'}</p>
-            <div class="project-tags">
-              ${repo.languages.map((lang) => `<span class="project-tag">${lang}</span>`).join('')}
-            </div>
+            <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="project-link">
+              <div class="project-header">
+                <h3 class="project-name">${escapeHtml(repo.name)}</h3>
+                <span class="project-arrow">→</span>
+              </div>
+              <p class="project-description">${escapeHtml(repo.description || 'No description available.')}</p>
+              <div class="project-tags">
+                ${repo.languages.map((lang) => `<span class="project-tag">${escapeHtml(lang)}</span>`).join('')}
+              </div>
+            </a>
           </li>`
       )
       .join('\n');
