@@ -414,6 +414,16 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Project card focus - show outline on card boundary, not stretched link */
+.project-link:focus-visible {
+  outline: none;
+}
+
+.project:has(.project-link:focus-visible) {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
 /* ===== Page Load Animation ===== */
 @keyframes fadeUp {
   from {
