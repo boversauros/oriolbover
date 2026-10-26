@@ -36,7 +36,7 @@ oriol-bover-portfolio/
 2. Install dependencies:
 
    ```
-   npm install
+   pnpm install
    ```
 
 3. Set up environment variables:
@@ -50,22 +50,22 @@ oriol-bover-portfolio/
 - To update GitHub data:
 
   ```
-  npm run update-data
+  pnpm update-data
   ```
 
 - To build the site:
 
   ```
-  npm run build
+  pnpm build
   ```
 
 - To run linting:
 
   ```
-  npm run lint
+  pnpm lint
   ```
 
 - To format code:
   ```
-  npm run format
+  pnpm format
   ```
