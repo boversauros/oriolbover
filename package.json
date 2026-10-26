@@ -7,7 +7,7 @@
     "build": "node scripts/build.js",
     "update-data": "node  --env-file=.env scripts/update-data.js",
     "update-data:ci": "node scripts/update-data.js",
-    "predeploy": "npm run update-data && npm run build",
+    "predeploy": "pnpm update-data && pnpm build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
@@ -21,9 +21,14 @@
   "license": "ISC",
   "description": "Oriol Bover's portfolio website",
   "devDependencies": {
-    "eslint": "9.8.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "prettier": "3.3.3"
+    "@eslint/js": "9.39.5",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "9.1.2",
+    "eslint-plugin-prettier": "5.5.7",
+    "prettier": "3.9.10"
+  },
+  "packageManager": "pnpm@11.28.8",
+  "engines": {
+    "node": ">=24.22.1"
   }
 }
